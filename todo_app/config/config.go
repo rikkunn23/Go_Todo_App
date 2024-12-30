@@ -1,6 +1,7 @@
 package config
 
 import (
+	utils "go_todo_app/todo_app/Utils"
 	"log"
 
 	"gopkg.in/ini.v1"
@@ -21,6 +22,7 @@ var Config ConfigList
 // main関数より先に読み込みたい用
 func init(){
 	LoadConfig()
+	utils.LoggingSetting(Config.LogFile)
 }
 
 func LoadConfig(){

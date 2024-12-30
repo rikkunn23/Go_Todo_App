@@ -3,6 +3,7 @@ package main
 import (
 	"fmt"
 	"go_todo_app/todo_app/config"
+	"log"
 	"net/http" // config パッケージをインポート
 )
 
@@ -17,6 +18,7 @@ func main() {
 	fmt.Println("SQLDriver:", config.Config.SQLDriver)
 	fmt.Println("DbName:", config.Config.DbName)
 	fmt.Println("LogFile:", config.Config.LogFile)
+  log.Println("test")
 
 	// HTTP サーバーの起動
 	http.HandleFunc("/", handler)
